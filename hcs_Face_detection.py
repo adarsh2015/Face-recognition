@@ -9,8 +9,8 @@ while(True):
         continue
     faces  = face_cascade.detectMultiScale(frame,1.05,5)
     for (x,y,w,h) in faces:
-        cv2.rectangle(gray_frame,(x,y),(x+w,y+h),(255,0,0),1)
-    cv2.imshow("video frame",gray_frame)
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),1)
+    cv2.imshow("video frame",frame)
     key_pressed = cv2.waitKey(1)&0xFF
     if(key_pressed == ord('q')):
         break  
